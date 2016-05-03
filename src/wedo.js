@@ -144,11 +144,7 @@ class WeDo {
    * @param {number} value The new motor A value
    */
   set motorA(value) {
-    if (value < -100 || value > 100) {
-      throw new Error(`A motor can only be between -100 and 100: ${value}`)
-    }
-
-    this.valMotorA = value;
+    this.valMotorA = motor.sanitizeMotorValue(value);
     this.setMotors();
   }
 
@@ -167,11 +163,7 @@ class WeDo {
    * @param {number} value The new motor B value
    */
   set motorB(value) {
-    if (value < -100 || value > 100) {
-      throw new Error(`A motor can only be between -100 and 100: ${value}`)
-    }
-
-    this.valMotorB = value;
+    this.valMotorB = motor.sanitizeMotorValue(value);
     this.setMotors();
   }
 

@@ -11,11 +11,13 @@ wd.motorA = 0;
 var done = false;
 const showSensors = () => {
   setTimeout(() => {
-    // console.log('Raw Data:', wd.rawData);
+    console.log('Raw Data:', wd.rawData);
     console.log(`Tilt: ${wd.tilt} (${wd.rawTilt})`);
     console.log(`Distance: ${wd.distance} (${wd.rawDistance})`);
 
     if (!done) {
+      wd.motorA += 3;
+
       showSensors();
     }
   }, 100);
