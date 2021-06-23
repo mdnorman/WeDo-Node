@@ -4,6 +4,6 @@
   "private": true,
   "scripts": {},
   "dependencies": {
-    "node-hid": "^0.5.1"
+    "node-hid": "0.5.7"
   }
 }
